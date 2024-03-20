@@ -1,0 +1,10 @@
+[user]
+	name = micron-mushroom
+	email = micron.mushroom@gmail.com
+	signingkey = 7455DF2AE19C5690
+[core]
+	sshCommand = "ssh -i ~/.ssh/github-mushroom"
+[commit]
+	gpgsign = true
+[gpg]
+	sign = true

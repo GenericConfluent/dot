@@ -1,0 +1,10 @@
+[user]
+	name = 54n17y
+	email = 54n17y@proton.me
+	signingkey = 7280DE395B13337F
+[core]
+	sshCommand = "ssh -i ~/.ssh/github-sanity"
+[commit]
+	gpgsign = true
+[gpg]
+	sign = true

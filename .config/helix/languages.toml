@@ -1,0 +1,21 @@
+##### RUST #####
+[[language]]
+name = "rust"
+
+# [language.language-server]
+# command = "rustup"
+# args = ["run", "nightly", "rust-analyzer"]
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+##### PYTHON #####
+[[language]]
+name = "python"
+language-servers = ["pyright"]
+
+[language.indent]
+tab-width = 4
+unit = "    "
+
+##### HASKELL #####

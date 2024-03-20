@@ -1,0 +1,14 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+cursorline = true
+color-modes = true
+
+# We hate mouse
+mouse = false
+middle-click-paste = false
+scroll-lines = 0
+
+[keys.insert]
+j = { k = "normal_mode" }
