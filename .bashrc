@@ -11,8 +11,9 @@ set -o vi
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias hx='helix'
+alias tmux='tmux -u2'
 
-PATH=$HOME/bin:$PATH:~/.ghcup/bin
+PATH="$HOME/scripts:$HOME/bin:$PATH:~/.ghcup/bin"
 
 # Use X for android emulator because it's bundled with its own version
 # of QT and doesn't include the wayland module.
@@ -31,6 +32,9 @@ export G__GLX_VENDOR_LIBRARY_NAME=nvidia
 export GENABLE_VKBASALT=1
 export GLIBVA_DRIVER_NAME=nvidia
 
+# Make iced apps work on my desktop with NVIDIA.
+export ICED_BACKEND=tiny-skia
+
 # My cursor is rendering fine so I can ignore this.
 # export GWLR_NO_HARDWARE_CURSORS=1
 
@@ -39,6 +43,8 @@ export COLORTERM=truecolor
 
 PS1='[\u@\h \W]\$ '
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+eval "$(zoxide init bash)"
 
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
     Hyprland

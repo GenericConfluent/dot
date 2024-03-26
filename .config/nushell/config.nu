@@ -2,6 +2,11 @@
 #
 # version = "0.84.0"
 
+use ~/.cache/starship/init.nu
+source ~/.cache/zoxide/init.nu
+
+alias tmux = tmux -u2
+
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
