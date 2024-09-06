@@ -1,5 +1,8 @@
+-- Create an autocmd group
+local lsp_group = vim.api.nvim_create_augroup('UserLspConfig', {})
+
 vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+    group = lsp_group,
     callback = function(ev)
         -- Enable completion triggered by <c-x><c-o>
         vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -28,6 +31,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
     end,
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+    group = lsp_group,
+    callback = function(ev)
+        vim.lsp.buf.format()
+    end
 })
 
 vim.diagnostic.config({ virtual_text = true })
