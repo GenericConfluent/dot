@@ -1,0 +1,15 @@
+window#waybar {
+    background: @theme_base_color;
+}
+
+* {
+    color: @text;
+}
+
+.module {
+    padding: 0 10px;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 33,
+    "modules-left": ["clock", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "wireplumber"],
+    "cpu": {
+        "format": "CPU {}%"
+    },
+    "memory": {
+        "format": "MEM {}%"
+    },
+    "wireplumber": {
+        "format": "VOL {volume}%"
+    },
+    "clock": {
+        
+    },
+    "hyprland/window": {
+        "rewrite": {
+            "(.*) nvim": "Neovim"
+        },
+        "icon": true
+    }
+}
