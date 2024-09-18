@@ -3,7 +3,7 @@ window#waybar {
 }
 
 * {
-    color: @text;
+    color: @theme_text_color;
 }
 
 .module {
