@@ -30,5 +30,6 @@ white   = '#FFFFFF'
 [shell]
 program = "/usr/bin/nu"
 
-# [window]
-# opacity = 0.8
+[font]
+size = 20
+normal = { family = "0xProto Nerd Font Mono" }
