@@ -3,8 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
+# [[ $- != *i* ]] && return
 
 set -o vi
 
@@ -13,7 +12,7 @@ alias grep='grep --color=auto'
 alias hx='helix'
 alias tmux='tmux -u2'
 
-PATH="$HOME/scripts:$HOME/bin:$PATH:~/.ghcup/bin"
+export PATH="$HOME/scripts:$HOME/bin:$PATH:~/.ghcup/bin:$HOME/.cargo/bin:$HOME/.npm-global/bin"
 
 # Use X for android emulator because it's bundled with its own version
 # of QT and doesn't include the wayland module.
@@ -21,6 +20,7 @@ export QT_QPA_PLATFORM="xcb"
 
 # Also important, desktop apps will freak without it.
 # export XDG_CURRENT_DESKTOP="river"
+export WGPU_BACKEND="vulkan"
 
 # KDE native dialogs
 export GTK_USE_PORTAL=1
@@ -44,30 +44,11 @@ export GLIBVA_DRIVER_NAME=nvidia
 # Properly display colors over ssh
 export COLORTERM=truecolor
 
-# Happy conda
+# Happy conda (if I install it again)
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
-
-PS1='[\u@\h \W]\$ '
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 eval "$(zoxide init bash)"
 
 # if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 #     Hyprland
 # fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-

@@ -48,7 +48,13 @@ return {
         lazy = false,
         config = function()
             local lsp = require("lspconfig")
-            lsp.clangd.setup {}
+            lsp.clangd.setup {
+                cmd = {
+                    "clangd",
+                    "--header-insertion=never",
+                    "--fallback-style=llvm",
+                }
+            }
             lsp.pyright.setup {}
             lsp.lua_ls.setup {
                 settings = {

@@ -27,9 +27,11 @@ magenta = '#FFEE99'
 cyan    = '#95E6CB'
 white   = '#FFFFFF'
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/nu"
 
 [font]
-size = 20
+size = 14
 normal = { family = "0xProto Nerd Font Mono" }
+
+[terminal]
