@@ -28,7 +28,7 @@ cyan    = '#95E6CB'
 white   = '#FFFFFF'
 
 [terminal.shell]
-program = "/usr/bin/nu"
+program = "nu"
 
 [font]
 size = 14
