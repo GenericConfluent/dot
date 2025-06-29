@@ -1,0 +1,96 @@
+# Ayu Dark theme ported from Alacritty config
+
+# UI
+"ui.background" = { bg = "bg" }
+"ui.text" = "fg"
+"ui.text.focus" = "bright_white"
+"ui.selection" = { bg = "selection" }
+"ui.cursor" = { fg = "bg", bg = "fg" }
+"ui.cursor.match" = { fg = "bg", bg = "yellow" }
+"ui.linenr" = "bright_black"
+"ui.linenr.selected" = "white"
+"ui.statusline" = { fg = "fg", bg = "bg_highlight" }
+"ui.statusline.inactive" = { fg = "bright_black", bg = "bg" }
+"ui.popup" = { bg = "bg_highlight" }
+"ui.window" = { fg = "bright_black" }
+"ui.help" = { fg = "fg", bg = "bg_highlight" }
+"ui.menu" = { bg = "bg_highlight" }
+"ui.menu.selected" = { bg = "selection" }
+"ui.virtual.whitespace" = "bright_black"
+"ui.virtual.ruler" = { bg = "bg_highlight" }
+
+# Syntax highlighting
+"attribute" = "yellow"
+"type" = "blue"
+"constructor" = "blue"
+"constant" = "magenta"
+"constant.numeric" = "magenta"
+"constant.character.escape" = "cyan"
+"string" = "green"
+"string.regexp" = "cyan"
+"comment" = { fg = "bright_black", modifiers = ["italic"] }
+"variable" = "fg"
+"variable.builtin" = "red"
+"variable.parameter" = "fg"
+"variable.other.member" = "fg"
+"label" = "yellow"
+"punctuation" = "fg"
+"punctuation.delimiter" = "fg"
+"punctuation.bracket" = "fg"
+"keyword" = "red"
+"keyword.directive" = "yellow"
+"operator" = "red"
+"function" = "yellow"
+"function.builtin" = "yellow"
+"function.macro" = "yellow"
+"tag" = "red"
+"namespace" = "yellow"
+
+# Markup
+"markup.heading" = { fg = "yellow", modifiers = ["bold"] }
+"markup.list" = "red"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "cyan", modifiers = ["underlined"] }
+"markup.link.text" = "blue"
+"markup.quote" = "bright_black"
+"markup.raw" = "green"
+
+# Diff
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "yellow"
+
+# Diagnostics
+"diagnostic" = { modifiers = ["underlined"] }
+"diagnostic.hint" = { underline = { style = "curl", color = "cyan" } }
+"diagnostic.info" = { underline = { style = "curl", color = "blue" } }
+"diagnostic.warning" = { underline = { style = "curl", color = "yellow" } }
+"diagnostic.error" = { underline = { style = "curl", color = "red" } }
+
+[palette]
+# Primary colors
+bg = "#0A0E14"
+fg = "#B3B1AD"
+bg_highlight = "#1A1F29"
+selection = "#253340"
+
+# Normal colors
+black = "#01060E"
+red = "#EA6C73"
+green = "#91B362"
+yellow = "#F9AF4F"
+blue = "#53BDFA"
+magenta = "#FAE994"
+cyan = "#90E1C6"
+white = "#C7C7C7"
+
+# Bright colors
+bright_black = "#686868"
+bright_red = "#F07178"
+bright_green = "#C2D94C"
+bright_yellow = "#FFB454"
+bright_blue = "#59C2FF"
+bright_magenta = "#FFEE99"
+bright_cyan = "#95E6CB"
+bright_white = "#FFFFFF"

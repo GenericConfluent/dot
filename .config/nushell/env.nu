@@ -83,7 +83,7 @@ $env.NU_PLUGIN_DIRS = [
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
 mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
+starship init nu | str replace -a "let-env " '$env.' | $"export-env {($in)}" | save -f ~/.cache/starship/init.nu
 
 mkdir ~/.cache/zoxide
 zoxide init nushell | save -f ~/.cache/zoxide/init.nu
