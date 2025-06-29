@@ -66,10 +66,7 @@ return {
                 }
             }
             lsp.rust_analyzer.setup {}
-            lsp.tsserver.setup {}
-            lsp.hls.setup {}
             lsp.zls.setup {}
-            lsp.kotlin_language_server.setup {}
         end
     },
     {
