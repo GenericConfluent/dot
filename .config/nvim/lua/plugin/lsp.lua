@@ -47,16 +47,24 @@ return {
         'neovim/nvim-lspconfig',
         lazy = false,
         config = function()
-            local lsp = require("lspconfig")
-            lsp.clangd.setup {
+            -- First, define/customize configs using vim.lsp.config() if needed
+            -- Then enable them using vim.lsp.enable()
+            
+            -- Clangd with custom configuration
+            vim.lsp.config('clangd', {
                 cmd = {
                     "clangd",
                     "--header-insertion=never",
                     "--fallback-style=llvm",
                 }
-            }
-            lsp.pyright.setup {}
-            lsp.lua_ls.setup {
+            })
+            vim.lsp.enable('clangd')
+            
+            -- Pyright with default configuration
+            vim.lsp.enable('pyright')
+            
+            -- Lua LS with custom settings
+            vim.lsp.config('lua_ls', {
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -64,9 +72,24 @@ return {
                         }
                     }
                 }
-            }
-            lsp.rust_analyzer.setup {}
-            lsp.zls.setup {}
+            })
+
+            vim.lsp.enable('lua_ls')
+            
+            -- Rust Analyzer with default configuration
+            vim.lsp.enable('rust_analyzer')
+            
+            -- TypeScript LS with default configuration
+            vim.lsp.enable('ts_ls')
+            
+            -- Haskell LS with default configuration
+            vim.lsp.enable('hls')
+            
+            -- Zig LS with default configuration
+            vim.lsp.enable('zls')
+            
+            -- Kotlin Language Server with default configuration
+            vim.lsp.enable('kotlin_language_server')
         end
     },
     {

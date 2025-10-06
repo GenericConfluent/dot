@@ -6,6 +6,8 @@ use ~/.cache/starship/init.nu
 source ~/.cache/zoxide/init.nu
 
 alias tmux = tmux -u2
+alias bat = batcat
+alias seek = ^find
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html

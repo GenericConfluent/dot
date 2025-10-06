@@ -88,3 +88,6 @@ starship init nu | str replace -a "let-env " '$env.' | $"export-env {($in)}" | s
 mkdir ~/.cache/zoxide
 zoxide init nushell | save -f ~/.cache/zoxide/init.nu
 
+if ("__zoxide_hooked" in $env) {
+    $env.__zoxide_hooked = ($env.__zoxide_hooked == "true")
+}
