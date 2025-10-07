@@ -32,7 +32,6 @@ program = "nu"
 
 [font]
 size = 14
-# normal = { family = "0xProto Nerd Font Mono" }
-normal = { family = "MonaspiceNe Nerd Font Mono" }
+normal = { family = "MonaspiceNe Nerd Font" }
 
 [terminal]
