@@ -1,0 +1,10 @@
+{
+    (
+        modifiers: [],
+        key: "XF86KbdBrightnessUp",
+    ): System(KeyboardBrightnessUp),
+    (
+        modifiers: [],
+        key: "XF86KbdBrightnessDown",
+    ): System(KeyboardBrightnessDown),
+}

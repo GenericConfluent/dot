@@ -1,0 +1,3 @@
+{
+    Terminal: "env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/alacritty_alacritty.desktop /snap/bin/alacritty",
+}
